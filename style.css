@@ -1,0 +1,345 @@
+/************* CSS RESET **********/
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    /* So that elements will scale  correctly */
+}
+/************* GENERIC ELEMENTS **********/
+body{
+    background-color:(aliceblue(255, 250, 240)5, 255);
+
+    font-family:Pacifico,Arial, Helvetica, sans-serif ;
+    
+    line-height: 1.6;
+    min-height: 200vh;
+    
+}
+hr{
+    /**Borders in HR elements are renderd in 3D 
+    so if we went a clean line ,we need to cancel the defult border*/
+    border: none;
+    border-top: 1px solid #ccc;
+    /**marign :top/bottom left/right**/
+    /* important will prevent this from changing*/
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+/************* INTRO SCREEN **********/
+.intro{
+    background-image: url(https://plantura.garden/uk/wp-content/uploads/sites/2/2022/06/types-of-bird-feathers-1024x683.jpg?x63657);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw; /*100%of the windows width*/
+    width: auto; /*fixes a scrolling bug */
+    height: 100vh; /* 100% of the windows hight*/
+    display: flex;
+
+   
+}
+ /**Replace the orignal intro css*/
+
+.intro-narrow{
+    height: 75vh;
+    z-index: 990;
+
+    }
+
+.intro-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    /*properties:X and Y Size colour*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 25%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+.intro h1{
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.intro p{
+    line-height: 2;
+}
+/************* CARDS**********/
+.card{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.card-image{
+    height: 500px;
+    overflow: hidden;
+}
+.card img{
+    display: block;
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    
+}
+.card h2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    /*em -scaling unit based on font size*/
+}
+.card:hover img{
+    transform: scale(1.2);
+    transition-duration: 10s;
+    transition-timing-function: linear;
+}
+/************* CONTAINER**********/
+.container{
+    max-width: 1280px;
+    margin: auto;
+}
+/************* GRID LAYOUT**********/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    
+}
+.one-column .card{
+    width: 100%;
+}
+
+.two-column .card{
+    width: calc((100% - 120px) / 2 );
+}
+
+.three-column .card{
+    width: calc((100% - 120px) / 3 );
+}
+.four-column .card{
+    width: calc((100% - 150px) / 4 );
+}
+
+.fvie-column .card{
+    width: calc((100% - 150px) / 5 );
+}
+
+.six-column .card{
+    width: calc((100% - 150px) / 6 );
+}
+
+.seven-column .card{
+    width: calc((100% - 150px) / 7 );
+}
+/************* MAIN CONTENT **********/
+.main-content{
+    margin-top: 100px;
+}
+.content-narrow{
+    width: 50%;
+    min-width: 640px;
+    margin: auto;
+}
+.vertical-title{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    
+    
+    
+    transform-origin: 0 0;
+    transform: rotate(90deg) translateY(5px);
+    position: absolute;
+    /* dosent fow with the normal contoent*/
+    
+}
+/****footer card****/
+
+.footer{
+    
+    background-color: rgb(223, 223, 223);
+    padding: 50px;
+    
+    font: size 0.8em;;
+    text-align: center;
+    
+}
+.footer .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .summery{
+    width: 33%;
+}
+.footer .footer-links{
+    margin-left: auto;
+    list-style: none;
+    font-size: smaller;
+    columns: 2; /*comment if we don't want colums next to eachother*/
+    gap: 50px;
+}
+
+.footer .footer-links{
+    color: black;
+    text-decoration: none;
+}
+
+.footer .copyright{
+    width: 100%;
+    text-align: right;
+}
+/****Navigation****/
+.navbar{
+    /***positions the navebaron the screen 
+    and not in the normal HTML flow*/
+    
+    background-color: #fff;
+    
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    
+    /* forces the nave bar to be on top of other elements*/
+    z-index: 1002;
+}
+.navbar .container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+}
+.navbar a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.nav-link{
+    padding: 30px 20px;
+
+     /** Top/bottom /left/right*/
+}
+.navbar-brand{
+    font-family:  Itim , Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    align-content: center;
+}
+/**Stories**/
+.story-header h1{
+    font-size: 2em;
+    margin-bottom: 25px;
+
+}
+.story-header{
+    font-size: 1.5em;
+    font-family:  Itim , Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.2;
+}
+.story-header .byline{
+    margin-top: 10px;
+
+}
+/**targets all elements inside class= "by line"**/
+.story-header .byline * {
+
+    display: inline;
+
+    font-style: normal;
+/* story content > p affects only direct children paragrpahs */
+}
+.story-content > p, .story-content .row{
+    margin-top: 50px;
+}
+.story-footer{
+    background-color: #f0f0f0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 100px 50px;
+}
+.story-footer p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.Keep-reading{
+    background-color: #f0f0f0;
+    padding: 50px 50px 0;
+}
+/**Shareing layout**/
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+.social-icon{
+    display: block;
+    background-color: #e0e0e0;
+    margin: 10px;
+    padding: 10px;
+    transition-property: background-color;
+    transition-duration: 0.15s;
+}
+.social-icon svg{
+    display: block;
+    font-size: 20px;
+    transition-property: fill;
+    transition-duration: 0.15s;
+ width: 1em;
+ height: 1em;
+ /** chaanges the fill color os an SVG element*/ 
+ fill: #000;  
+}
+.social-icon:hover{
+    background-color: #000;
+    
+}
+.social-icon:hover svg{
+    fill:#fff
+}
+/*****Contact Form****/
+.website-form{
+    margin-bottom: 100px;
+
+}
+.form-element{
+    display: flex;
+    margin-top: 10px;
+}
+.form-element label{
+    width: 200px;
+}
+.form-element input,
+.form-element select,
+.form-element textarea{
+    font-family: Itim,Georgia, 'Times New Roman', Times, serif;
+
+    display: block;
+
+    padding: 5px;
+    flex: 1;
+    resize: none;
+}
+.form-element button{
+    font-family: Itim,Georgia, 'Times New Roman', Times, serif;
+
+    display: block;
+
+    padding: 5px;
+    width: 100px;
+    margin-right: 10px;
+}

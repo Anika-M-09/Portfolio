@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio:: Leaves</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Wedsit Navigation-->
+    <nav class="navbar">
+        <div class="container">
+            
+            <!---Wedist Brand-->
+            <a href="#" class="navbar-brand">My Portfolio</a>
+            <!--links-->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Featured Stories</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Share Your Intrests</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Wed Sit Container-->
+    <div class="container">
+        
+        <!--into screen -->
+        <header class="intro intro-narrow"></header>
+        
+        <!--Main Wedsit Content-->
+        
+        <main class="main-content">
+            
+            <!--Forms need to use a back-end code to send an email
+            .It is not possible to make this work 
+            using only HTML and CSS .
+            For this example we'll just compile an email-->
+            
+            <form action="mailto:info@example.com"
+            method="post"
+            enctype="text/plain"
+            class="website-form content-narrow">
+            
+            <h2>Share Your Intrests</h2>
+            <div class="form-element">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Jhon Smith"requird>
+            </div>
+            <!--The value=""part of a dropdown will print the email-->
+            <div class="form-element">
+                <label for="">Email Address:</label>
+                <input type="email" name="email" id="email" placeholder="me@example.com"requird>
+            </div>
+            <div class="form-element">
+                <label for="subject">Subject</label>
+                <select name="subject" id="subject">
+                    <option value="What do you like">What do you like</option>
+                    <option value="Write a comment or interset">Write a comment or interset </option>
+                </select>
+            </div>
+            <div class="form-element">
+                <textarea name="message" id="message" rows="10" placeholder="Your message here"></textarea>
+            </div>
+            
+            <div class="form-element">
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        
+    </main>
+</div>
+
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <p class="summery">
+            Thank you so much for seeing my Portfoilo I hope to hear from you soon.
+        </p>
+        
+    </div>
+    <p class="copyright">
+        &copy;MY Portfolio
+    </p>
+    
+</div>
+
+
+</footer>
+</body>
+</html>
